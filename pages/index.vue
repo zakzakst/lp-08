@@ -3,7 +3,7 @@ mixin blogSlide
   v-slide-group.mb-2(center-active,show-arrows)
     v-slide-item(v-for="item in blogItems",:key="item.id")
       v-card.ma-4(
-        :href="item.id",
+        :href="item.link",
         target="_blank",
         height="240",
         width="200",
@@ -103,6 +103,7 @@ export default {
     blogItems: [
       {
         id: 1,
+        link: '#',
         img: 'https://picsum.photos/id/11/500/300',
         title: 'タイトルが入ります。タイトルが入ります。',
         date: '2020.11.01',
@@ -110,6 +111,7 @@ export default {
       },
       {
         id: 2,
+        link: '#',
         img: 'https://picsum.photos/id/11/500/300',
         title: 'タイトルが入ります。タイトルが入ります。タイトルが入ります。',
         date: '2020.11.01',
@@ -117,6 +119,7 @@ export default {
       },
       {
         id: 3,
+        link: '#',
         img: 'https://picsum.photos/id/11/500/300',
         title: 'タイトルが入ります',
         date: '2020.11.01',
@@ -124,6 +127,7 @@ export default {
       },
       {
         id: 4,
+        link: '#',
         img: 'https://picsum.photos/id/11/500/300',
         title: 'タイトルが入ります。タイトルが入ります。タイトルが入ります。',
         date: '2020.11.01',
@@ -131,6 +135,7 @@ export default {
       },
       {
         id: 5,
+        link: '#',
         img: 'https://picsum.photos/id/11/500/300',
         title: 'タイトルが入ります。タイトルが入ります。タイトルが入ります。',
         date: '2020.11.01',
@@ -138,6 +143,7 @@ export default {
       },
       {
         id: 6,
+        link: '#',
         img: 'https://picsum.photos/id/11/500/300',
         title: 'タイトルが入ります。',
         date: '2020.11.01',
