@@ -1,7 +1,7 @@
 <template lang="pug">
-mixin newsSlide
+mixin blogSlide
   v-slide-group.mb-2(center-active,show-arrows)
-    v-slide-item(v-for="item in newsItems",:key="item.id")
+    v-slide-item(v-for="item in blogItems",:key="item.id")
       v-card.ma-4(
         :href="item.id",
         target="_blank",
@@ -64,8 +64,8 @@ div
   v-container
     v-row(justify="center")
       v-col(cols="12",sm="8")
-        h2.mb-4.text-center ニュース
-        +newsSlide
+        h2.mb-4.text-center ブログ
+        +blogSlide
 
 </template>
 
@@ -100,7 +100,7 @@ export default {
         content: '東京都○○区○○町 0-00-00',
       },
     ],
-    newsItems: [
+    blogItems: [
       {
         id: 1,
         img: 'https://picsum.photos/id/11/500/300',

@@ -1,0 +1,41 @@
+<template lang="pug">
+div
+  v-img(
+    height="120"
+    width="100%"
+    :lazy-src="mainImgLazy"
+    :src="mainImg"
+  )
+
+  v-container.pt-12
+    v-row(justify="center")
+      v-col(cols="12",sm="8")
+        h1.mb-4.text-center よくある質問
+        v-expansion-panels(focusable)
+          v-expansion-panel(v-for="(item, index) in faqItems",:key="index")
+            v-expansion-panel-header {{ item.question }}
+            v-expansion-panel-content {{ item.answer }}
+</template>
+
+<script>
+export default {
+  data: () => ({
+    mainImg: 'https://picsum.photos/id/11/500/300',
+    mainImgLazy: 'https://picsum.photos/id/11/10/6',
+    faqItems: [
+      {
+        question: 'テキストが入ります。テキストが入ります。テキストが入ります。',
+        answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+      },
+      {
+        question: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+        answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+      },
+      {
+        question: 'テキストが入ります。テキストが入ります。',
+        answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+      },
+    ]
+  }),
+}
+</script>
