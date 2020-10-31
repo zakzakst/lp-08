@@ -1,0 +1,17 @@
+TODO:
+  ☐ CSVの読み込み（https://uxmilk.jp/11586）
+  ☐ コンポーネント・STATEを計画する
+  ☐ リダイレクトを計画する
+
+最後に対応:
+  ☐ mixinsにまとめるスクリプトあるか検討
+  ☐ 最後にVScodeまわりの修正あれば「00」のほうにコピーしておく
+
+Archive:
+
+Memo:
+  ■■■ 参考 ■■■
+  ・「v-card」の設定
+  https://qiita.com/rubytomato@github/items/811e534805bbf659b5af
+
+  ■■■ 反省など ■■■
