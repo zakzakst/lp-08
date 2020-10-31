@@ -35,7 +35,6 @@ div
               outlined
             )
           .mb-4.text-center: v-btn(@click="submit",dark) 送信する
-
 </template>
 
 <script>
