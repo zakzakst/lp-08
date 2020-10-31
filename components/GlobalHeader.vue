@@ -4,6 +4,7 @@ v-app-bar(dark,fixed)
     v-tab(
       v-for="(item, index) in tabItems",
       :key="index"
+      :to="item.path"
     ) {{ item.label }}
 </template>
 
@@ -11,10 +12,22 @@ v-app-bar(dark,fixed)
 export default {
   data: () => ({
     tabItems: [
-      { label: 'HOME' },
-      { label: '講演一覧' },
-      { label: 'よくある質問' },
-      { label: 'お問い合わせ' },
+      {
+        label: 'HOME',
+        path: '/',
+      },
+      {
+        label: '講演一覧',
+        path: '/lecture',
+      },
+      {
+        label: 'よくある質問',
+        path: '/faq',
+      },
+      {
+        label: 'お問い合わせ',
+        path: '/contact',
+      },
     ],
   })
 }
