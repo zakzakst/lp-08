@@ -66,7 +66,6 @@ div
       v-col(cols="12",sm="8")
         h2.mb-4.text-center ブログ
         +blogSlide
-
 </template>
 
 <script>
@@ -93,7 +92,7 @@ export default {
       },
       {
         label: '場所',
-        content: '○○公園 イベントスペース',
+        content: '○○ビル3階 イベントスペース',
       },
       {
         label: '住所',
