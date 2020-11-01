@@ -54,6 +54,8 @@ export default {
       if (this.name && this.email && this.content) {
         const message = `【送信】\n名前：${this.name}\nメールアドレス：${this.email}\n内容：${this.content}`;
         alert(message);
+      } else {
+        alert('送信内容が入力されていません');
       }
     }
   }
