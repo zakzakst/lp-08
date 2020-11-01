@@ -1,5 +1,10 @@
 <template lang="pug">
-v-card(hover,@click="showDialog(index)",:ripple="{ center: true }")
+v-card(
+  hover,
+  @click="showDialog(index)",
+  :ripple="{ center: true }",
+  height="100%"
+)
   v-card-title {{ item.title }}
   v-card-subtitle 11月{{ item.date }}日 {{ item.startTime }} ～ {{ item.endTime }}
   v-card-text(v-html="item.speaker")

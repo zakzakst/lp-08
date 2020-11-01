@@ -1,18 +1,23 @@
 TODO:
-  ☐ CSVの読み込み（https://uxmilk.jp/11586）
   ☐ noteへのリンク表示
-  ☐ コンポーネント・STATEを計画する
-  ☐ リダイレクトを計画する
 
 最後に対応:
   ☐ mixinsにまとめるスクリプトあるか検討
   ☐ 最後にVScodeまわりの修正あれば「00」のほうにコピーしておく
 
 Archive:
+  ✔ CSVの読み込み（https://uxmilk.jp/11586） @done(20-11-01 10:19) @project(TODO)
 
 Memo:
   ■■■ 参考 ■■■
   ・「v-card」の設定
   https://qiita.com/rubytomato@github/items/811e534805bbf659b5af
+
+  ・CSVのパース→いまいち上手くいかない
+  https://teratail.com/questions/41598
+  https://gist.github.com/think49/009a8744c147a7013f14ea8913bd9027
+
+  ・改行区切りで配列変換
+  https://javascript.step-learn.com/contents/J151-split-lf.html
 
   ■■■ 反省など ■■■
