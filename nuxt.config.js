@@ -46,7 +46,9 @@ export default {
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    baseURL: '/',
+  },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   // vuetify: {
@@ -69,5 +71,6 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    // extractCSS: true,
   }
 }
