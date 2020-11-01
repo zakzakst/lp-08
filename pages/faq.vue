@@ -1,9 +1,9 @@
 <template lang="pug">
 div
-  v-img(
-    height="120"
-    width="100%"
-    :lazy-src="mainImgLazy"
+  v-img.grey(
+    height="120",
+    width="100%",
+    :lazy-src="mainImgLazy",
     :src="mainImg"
   )
 
@@ -20,8 +20,8 @@ div
 <script>
 export default {
   data: () => ({
-    mainImg: 'https://picsum.photos/id/11/500/300',
-    mainImgLazy: 'https://picsum.photos/id/11/10/6',
+    mainImg: 'https://picsum.photos/id/14/2000/120',
+    mainImgLazy: 'https://picsum.photos/id/14/100/6',
     faqItems: [
       {
         question: 'テキストが入ります。テキストが入ります。テキストが入ります。',

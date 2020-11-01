@@ -7,8 +7,8 @@ v-dialog(
   @click:outside="hideDialog"
 )
   v-card(v-if="dialogData")
-    v-img.grey.white--text.align-end(
-      height="120px",
+    v-img.grey(
+      height="120",
       :src="dialogData.img"
     )
       template(v-slot:placeholder)

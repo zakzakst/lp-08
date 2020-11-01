@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  v-img(
+  v-img.grey(
     height="120",
     width="100%",
     :lazy-src="mainImgLazy",
@@ -49,7 +49,7 @@ div
             :key="index"
             cols="12",
             sm="6",
-            lg="4",
+            lg="4"
           )
             v-card
               v-skeleton-loader(type="article, divider, list-item")
@@ -67,8 +67,8 @@ import LectureDialog from '@/components/LectureDialog'
 
 export default {
   data: () => ({
-    mainImg: 'https://picsum.photos/id/11/500/300',
-    mainImgLazy: 'https://picsum.photos/id/11/10/6',
+    mainImg: 'https://picsum.photos/id/11/2000/120',
+    mainImgLazy: 'https://picsum.photos/id/11/100/6',
     dateSelect: 'all',
     dateItems: [
       {

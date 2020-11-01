@@ -1,6 +1,6 @@
 <template lang="pug">
 mixin blogSlide
-  v-slide-group.mb-2(center-active,show-arrows)
+  v-slide-group.mb-2(v-if="blogItems",center-active,show-arrows)
     v-slide-item(v-for="item in blogItems",:key="item.id")
       v-card.ma-4(
         :href="item.link",
@@ -24,10 +24,10 @@ mixin blogSlide
         v-card-text {{ item.text | trimText(24) }}
 
 div
-  v-img(
-    height="120"
-    width="100%"
-    :lazy-src="mainImgLazy"
+  v-img.grey(
+    height="120",
+    width="100%",
+    :lazy-src="mainImgLazy",
     :src="mainImg"
   )
 
@@ -46,12 +46,12 @@ div
             th {{ item.label }}
             td {{ item.content }}
         iframe(
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6476.091846566769!2d139.805343!3d35.749676!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6bc4e612ab55d171!2z5YyX5Y2D5L2P6aeF!5e0!3m2!1sja!2sjp!4v1604164774072!5m2!1sja!2sjp"
-          width="100%"
-          height="300px"
-          frameborder="0"
-          style="border:0;"
-          allowfullscreen=""
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6476.091846566769!2d139.805343!3d35.749676!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6bc4e612ab55d171!2z5YyX5Y2D5L2P6aeF!5e0!3m2!1sja!2sjp!4v1604164774072!5m2!1sja!2sjp",
+          width="100%",
+          height="300px",
+          frameborder="0",
+          style="border:0",
+          allowfullscreen="",
         )
 
   v-container
@@ -71,8 +71,8 @@ div
 <script>
 export default {
   data: () => ({
-    mainImg: 'https://picsum.photos/id/11/500/300',
-    mainImgLazy: 'https://picsum.photos/id/11/10/6',
+    mainImg: 'https://picsum.photos/id/10/2000/120',
+    mainImgLazy: 'https://picsum.photos/id/10/100/6',
     infoItems: [
       {
         label: 'イベント名',
@@ -99,57 +99,17 @@ export default {
         content: '東京都○○区○○町 0-00-00',
       },
     ],
-    blogItems: [
-      {
-        id: 1,
-        link: '#',
-        img: 'https://picsum.photos/id/11/500/300',
-        title: 'タイトルが入ります。タイトルが入ります。',
-        date: '2020.11.01',
-        text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
-      },
-      {
-        id: 2,
-        link: '#',
-        img: 'https://picsum.photos/id/11/500/300',
-        title: 'タイトルが入ります。タイトルが入ります。タイトルが入ります。',
-        date: '2020.11.01',
-        text: 'テキストが入ります。テキストが入ります。',
-      },
-      {
-        id: 3,
-        link: '#',
-        img: 'https://picsum.photos/id/11/500/300',
-        title: 'タイトルが入ります',
-        date: '2020.11.01',
-        text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
-      },
-      {
-        id: 4,
-        link: '#',
-        img: 'https://picsum.photos/id/11/500/300',
-        title: 'タイトルが入ります。タイトルが入ります。タイトルが入ります。',
-        date: '2020.11.01',
-        text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
-      },
-      {
-        id: 5,
-        link: '#',
-        img: 'https://picsum.photos/id/11/500/300',
-        title: 'タイトルが入ります。タイトルが入ります。タイトルが入ります。',
-        date: '2020.11.01',
-        text: 'テキストが入ります。',
-      },
-      {
-        id: 6,
-        link: '#',
-        img: 'https://picsum.photos/id/11/500/300',
-        title: 'タイトルが入ります。',
-        date: '2020.11.01',
-        text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
-      },
-    ]
   }),
+  mounted() {
+    if (!this.blogItems) {
+      this.$store.dispatch('blog/setItems');
+    }
+  },
+  computed: {
+    blogItems() {
+      return this.$store.getters['blog/items'];
+    }
+  },
   filters: {
     trimText(val, limit) {
       if (val.length > limit) {

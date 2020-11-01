@@ -3,7 +3,7 @@ v-app-bar(dark,fixed)
   v-tabs(centered,center-active,show-arrows)
     v-tab(
       v-for="(item, index) in tabItems",
-      :key="index"
+      :key="index",
       :to="item.path"
     ) {{ item.label }}
 </template>
