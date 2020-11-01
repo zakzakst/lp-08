@@ -1,11 +1,12 @@
 TODO:
-  ☐ noteへのリンク表示
+  ☐ デプロイ
 
 最後に対応:
   ☐ mixinsにまとめるスクリプトあるか検討
   ☐ 最後にVScodeまわりの修正あれば「00」のほうにコピーしておく
 
 Archive:
+  ✔ noteへのリンク表示→CROSで出来ないので、staticにXMLファイル置いてパースするのだけ練習 @done(20-11-01 23:25) @project(TODO)
   ✔ CSVの読み込み（https://uxmilk.jp/11586） @done(20-11-01 10:19) @project(TODO)
 
 Memo:
@@ -19,5 +20,8 @@ Memo:
 
   ・改行区切りで配列変換
   https://javascript.step-learn.com/contents/J151-split-lf.html
+
+  ・HTMLタグを削除する正規表現
+  https://qiita.com/miiitaka/items/793555b4ccb0259a4cb8
 
   ■■■ 反省など ■■■

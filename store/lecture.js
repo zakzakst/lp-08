@@ -10,12 +10,15 @@ export const mutations = {
 
 export const actions = {
   async setItems({commit}) {
-    const csv = await this.$axios.$get('/lectures.csv');
+    const csv = await this.$axios.$get('/works/lp-08/lectures.csv');
     // CSVデータを二次元配列に変換
     let csvLines = csv.split(/\r\n|\n/);
     let csvArr = [];
     csvLines.forEach(line => {
-      csvArr.push(line.split(','));
+      // 空行でない場合、配列に追加（テキストエディタの設定などで、CSVの最終行が空行の場合がある）
+      if (line) {
+        csvArr.push(line.split(','));
+      }
     });
     // オブジェクトの作成
     const headings = csvArr.shift();

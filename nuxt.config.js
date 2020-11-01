@@ -1,4 +1,4 @@
-import colors from 'vuetify/es5/util/colors'
+// import colors from 'vuetify/es5/util/colors'
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -16,6 +16,10 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
+  },
+
+  router: {
+    base: '/works/lp-08',
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -45,23 +49,23 @@ export default {
   axios: {},
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
-  vuetify: {
-    customVariables: ['~/assets/variables.scss'],
-    theme: {
-      // dark: true,
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
-  },
+  // vuetify: {
+  //   customVariables: ['~/assets/variables.scss'],
+  //   theme: {
+  //     // dark: true,
+  //     themes: {
+  //       dark: {
+  //         primary: colors.blue.darken2,
+  //         accent: colors.grey.darken3,
+  //         secondary: colors.amber.darken3,
+  //         info: colors.teal.lighten1,
+  //         warning: colors.amber.base,
+  //         error: colors.deepOrange.accent4,
+  //         success: colors.green.accent3
+  //       }
+  //     }
+  //   }
+  // },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {

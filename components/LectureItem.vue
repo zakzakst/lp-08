@@ -13,9 +13,9 @@ v-card(
     v-chip-group(column)
       v-chip(
         v-for="(category, categoryIndex) in item.categories",
-        :key="categoryIndex"
-        small
-        dark
+        :key="categoryIndex",
+        small,
+        dark,
         :ripple="false"
       ) {{ category }}
 </template>
